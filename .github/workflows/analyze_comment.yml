@@ -53,3 +53,10 @@ jobs:
           header: next-bundle-analysis
           number: ${{ steps.get-comment-body.outputs.pr-number }}
           message: ${{ steps.get-comment-body.outputs.body }}
+
+      - name: Download artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+         name: bundle_analysis.json
+         path: path/to/local/file
+
